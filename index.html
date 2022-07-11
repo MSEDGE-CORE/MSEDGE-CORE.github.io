@@ -8,25 +8,30 @@
     <link rel="stylesheet" type="text/css" href="./css/font.css">
     <title>MSEDGE</title>
     <style>
+        html{
+            height:100%;
+            min-width:600px;
+            min-height:576px;
+        }
         body{
             background-color:#eef4f9;
             font-family:HarmonyOS_Sans_SC;
 
             overflow:auto;
             overflow-y:scroll;
-            min-height:650px;
             text-align:center;
+            height:100%;
         }
         #centerNav{
             /* 中间的大方块 */
             visibility:hidden;
-            transition:all 0.5s cubic-bezier(1,0,0,1);
+            transition:all 0.5s cubic-bezier(0,1,0,1);
 
             display:inline-block;
             position:relative;
-            top:600px;
+            top:100%;
             width:80%;
-            height:650px;
+            height:80%;
             min-width:1100px;
         }
         .navSec{
@@ -38,7 +43,7 @@
             margin-top:7%;
             margin-left:1%;
             width:32%;
-            height: 660px;
+            height:100%;
         }
 
         .inNavSce1{
@@ -60,8 +65,8 @@
             visibility:hidden;
         }
         #qq{
-            background-image:url(./img/addqq.png);
-            background-position:center;
+            background-image:url(./img/addQq.png);
+            background-position:bottom;
             
             float:left;
             width:48%;
@@ -71,7 +76,7 @@
             background-image:url(./img/qr.png);
         }
         #font{
-            background-image:url(./img/fontdownload.png);
+            background-image:url(./img/fontDownload.png);
 
             float:left;
             margin-left:4%;
@@ -91,8 +96,8 @@
             height:62%;
         }
         .inNavSce2:nth-child(2){
-            background-position:0 -15px;
-            background-image:url(./img/joinus.png);
+            background-position:0 -10px;
+            background-image:url(./img/joinUs.png);
             background-size:100% auto;
             background-repeat:no-repeat;
 
@@ -107,12 +112,12 @@
             margin-left:5%;
         }
         .inNavSce3:first-child{
-            background-image:url(./img/egstore.png);
+            background-image:url(./img/egStore.png);
             width:90%;
             height:46%;
         }
         .inNavSce3:nth-child(2){
-            background-image:url(./img/egcore.png);
+            background-image:url(./img/egCore.png);
             width:90%;
             height:46%;
         }

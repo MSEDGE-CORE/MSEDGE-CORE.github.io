@@ -1,15 +1,19 @@
+html{
+    height:100%;
+    min-width:600px;
+    min-height:576px;
+}
 body{
     background-color:#eef4f9;
     font-family:HarmonyOS_Sans_TC;
     color:#414141;
-    transition:all 0.5s cubic-bezier(1,0,0,1);
+    transition:all 0.5s cubic-bezier(0,1,0,1);
 
     position:relative;
-    top:700px;
+    top:100%;
     overflow:auto;
     overflow-y:scroll;
-    min-width:1080px;
-    min-height:650px;
+    height:99%;
 }
 #leftBlock{
     /* 左区块 */
@@ -19,7 +23,7 @@ body{
     float:left;
     margin-left:1%;
     width:33%;
-    height:650px;
+    height:99%;
     min-width:330px;
     box-shadow:10px 10px 50px #bebebe93;
     border-radius:10px;
@@ -33,7 +37,7 @@ body{
     float:left;
     margin-left:1%;
     width:64%;
-    height:650px;
+    height:99%;
     min-width:660px;
     box-shadow:10px 10px 50px #bebebe93;
     border-radius:10px;
@@ -64,7 +68,7 @@ body{
     border-radius:10px;
 
     display:inline-block;
-    margin-top:120px;
+    margin-top:30%;
     width:120px;
     height:120px;
 }
