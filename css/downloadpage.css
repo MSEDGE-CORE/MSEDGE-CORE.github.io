@@ -1,11 +1,11 @@
 html{
     height:100%;
-    min-width:600px;
-    min-height:576px;
+    min-width:1080px;
+    min-height:600px;
 }
 body{
     background-color:#eef4f9;
-    font-family:HarmonyOS_Sans_TC;
+    font-family:HarmonyOS_Sans_SC;
     color:#414141;
     transition:all 0.5s cubic-bezier(0,1,0,1);
 
@@ -124,8 +124,7 @@ body{
     overflow:auto;
 
     height:86%;
-    float:left;
-    margin:0 0 0 0;
+    display: inline-block;
 }
 #rightImgBox img{
     width:80%
