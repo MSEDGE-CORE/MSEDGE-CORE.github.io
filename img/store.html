@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/eglogo.ico">
+    <link rel="stylesheet" type="text/css" href="./css/downloadpage.css">
+    <title>应用商店</title>
+    <style>
+        #huawei{
+            background-color:#ca1a1a00;
+            color:rgb(36, 170, 248);
+            border-radius:10px;
+            transition:all 0.2s ease 0s;
+            display:inline-block;
+            width:150px;height:35px;
+        }
+        #huawei p{
+            margin:8px 0 0 0;
+            font-size:14px;
+        }
+        #huawei:hover{
+            background-color:#9e161600;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body id="Body">
+
+    <div id="leftBlock">
+        <div id="backHome" onClick="window.open('./index.html','_self')"><</div>
+        <div id="appIcoBox"><img id="appIco" title="EG Store" src="./img/egstoreico.png"></div>
+        <h1 id="appName">应用商店</h1>
+        <p id="author">MSEDGE</p>
+        <div id="downloadButton" onClick="window.open('https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaXA4bF9aYnVwd19lSUNnY1pHN0FwSjVKZ3c_ZT1hcE5ObXM.zip')"><p>立即下载<p></div><br/><br/>
+            <div id="huawei" onClick="window.open('https://msedge.lanzoul.com/b02ihn7ha')"><p>历史版本<p></div>
+    </div>
+    <div id="rightBlock">
+        <div id="screenshot">屏幕截图</div>
+        <div id="rightImgBox">
+            <img src="./img/store1.png">
+            <img src="./img/store2.png">
+        </div>
+    </div>
+    <script>
+        function intoAnimal(){
+            let oBody = document.getElementById("Body");
+            oBody.style.top="0px";
+        }
+        setTimeout("intoAnimal()","100");
+    </script>
+</body>
+</html>
