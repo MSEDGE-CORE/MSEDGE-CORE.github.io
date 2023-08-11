@@ -25,7 +25,6 @@ body{
     width:33%;
     height:99%;
     min-width:330px;
-    box-shadow:10px 10px 50px #bebebe93;
     border-radius:10px;
 }
 #rightBlock{
@@ -39,7 +38,6 @@ body{
     width:64%;
     height:99%;
     min-width:660px;
-    box-shadow:10px 10px 50px #bebebe93;
     border-radius:10px;
 }
 #rightBlock img{
