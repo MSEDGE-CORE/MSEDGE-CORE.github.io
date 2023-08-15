@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Assets/EG.png">
+    <title>MSEDGE</title>
+    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+    <style>
+        html
+        {
+            min-width: 580px;
+            max-width: 800px;  
+            margin: 0 auto;  
+            height: 101%;
+        }
+
+        body 
+        {
+            background-color:rgb(249,249,249);
+            color:black;
+            font-family: 'HarmonyOS Sans SC', sans-serif;
+            min-width: 500px;
+            max-width: 720px;
+            margin: 40px; 
+        }
+
+        .ContentEntrance 
+        {
+            animation: FloatIn 1s cubic-bezier(0,1,0,1);
+        }
+
+        .page-title 
+        {
+            font-weight: bold;
+            font-size: 48px;
+            margin: 4px 0 20px 4px;
+        }
+
+        .grid-container 
+        {
+            display: grid;
+            grid-gap: 4px;
+            max-width: 720px;
+        }
+        
+        .grid-item 
+        {
+            position: relative;
+            margin: 4px 0 0 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 36px;
+            background-color: none;
+            border: none;
+            max-width: 720px;
+        }
+
+        .qr-button 
+        {
+            width: 100px;
+            position:absolute;
+        }
+
+        .qr-image 
+        {
+            height: 256px;
+            width: 256px;
+            border-radius: 8px;
+        }
+
+        @media (prefers-color-scheme: dark) 
+        {
+            body 
+            {
+                background-color: rgb(40,40,40);
+                color: white;
+            }
+        }
+
+        @keyframes FloatIn
+        {
+            0% 
+            {
+                opacity: 0;
+                transform: translateY(500px);
+            }
+            40% 
+            {
+                opacity: 0;
+                transform: translateY(500px);
+            }
+            100% 
+            {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">QQ 群聊</h1>
+    <div class="ContentEntrance">
+        <div class="grid-container">
+            <div class="grid-item">
+                <fluent-button class="qr-button" onclick="window.open('https://jq.qq.com/?_wv=1027&k=2SCSDvni','_self')">打开QQ</fluent-button>
+            </div>
+            <div class="grid-item">
+                <img class="qr-image" src="./Assets/QR.png">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

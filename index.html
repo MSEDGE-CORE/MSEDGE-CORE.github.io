@@ -1,185 +1,210 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/eglogo.ico">
+    <link rel="icon" href="./Assets/EG.png">
     <title>MSEDGE</title>
+    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
     <style>
-        html{
-            height:100%;
-            min-width:600px;
-            min-height:576px;       
-        }
-        body{
-            background-color:#eef4f9;
-            font-family:HarmonyOS_Sans_SC;
-
-            overflow:auto;
-            overflow-y:scroll;
-            text-align:center;
-            height:100%;
-        }
-        #title{
-            /* 主体块标题 */
-                position:relative;
-                top:5%;
-                font-size:xx-large;
-        }
-        #centerNav{
-            /* 中心主体块 */
-            visibility:hidden;
-            transition:all 0.5s cubic-bezier(0,1,0,1);
-
-            display:inline-block;
-            position:relative;
-            top:100%;
-            width:800px;
-            height:500px;
-            min-width:1100px;
-        }
-        .navSec{
-            /* 选项卡 */
-            border-radius:10px;
-            visibility:hidden;
-
-            display:inline-block;
-            margin-left:1%;
-            width:30%;
-            height:100%;
+        html
+        {
+            min-width: 580px;
+            max-width: 800px;  
+            margin: 0 auto;  
+            height: 101%;
         }
 
-        .inNavSce1{
-            /* 属于一号选项卡的所有按钮 */
-            float:left;
-            margin-top:4%;
-            margin-left:5%;
-            width:90%;
-            height:30%;
-        }
-        .inNavSce1:nth-child(1){
-            /* 一号选项卡的第一个按钮 */
-            background-image:url(./img/bilibili.png);
-        }
-        .inNavSce1:nth-child(2){
-            /* 一号选项卡的第二个按钮 */
-            background-image:url(./img/register.png);
-            background-position:0 12px;
-        }
-        .inNavSce1:nth-child(3){
-            /* 一号选项卡的第三个按钮（盒子） */
-            visibility:hidden;
-        }
-        #qq{
-            /* 一号选项卡的QQ按钮 */
-            background-image:url(./img/addqq.png);
-            background-position:bottom;
-            
-            float:left;
-            width:48%;
-            height:100%;
-        }
-        #qq:hover{
-            background-image:url(./img/qr.png);
-        }
-        #font{
-            /* 一号选项卡的字体按钮 */
-            background-image:url(./img/fontdownload.png);
-
-            float:left;
-            margin-left:4%;
-            width:48%;
-            height:100%;
+        body 
+        {
+            background-color:rgb(249,249,249);
+            color:black;
+            font-family: 'HarmonyOS Sans SC', sans-serif;
+            min-width: 500px;
+            max-width: 720px;
+            margin: 40px; 
         }
 
-        .inNavSce2{
-            /* 属于二号选项卡的所有按钮 */
-            float:left;
-            margin-top:4%;
-            margin-left:5%;
-        }
-        .inNavSce2:first-child{
-            /* 二号选项卡的第一个按钮 */
-            background-image:url(./img/feedback.png);
-            width:90%;
-            height:62%;
-        }
-        .inNavSce2:nth-child(2){
-            /* 二号选项卡的第二个按钮 */
-            background-position:0 -10px;
-            background-image:url(./img/egblock.png);
-            background-size:100% auto;
-            background-repeat:no-repeat;
-
-            width:90%;
-            height:30.6%;
+        .ContentEntrance 
+        {
+            animation: FloatIn 1s cubic-bezier(0,1,0,1);
         }
 
-        .inNavSce3{
-            /* 属于三号选项卡的所有按钮 */
-            float:left;
-            margin-top:4%;
-            margin-left:5%;
-        }
-        .inNavSce3:first-child{
-            /* 三号选项卡的第一个按钮 */
-            background-image:url(./img/egstore.png);
-            width:90%;
-            height:46%;
-        }
-        .inNavSce3:nth-child(2){
-            /* 三号选项卡的第二个按钮 */
-            background-image:url(./img/egcore.png);
-            width:90%;
-            height:46.55%;
+        .page-title 
+        {
+            font-weight: bold;
+            font-size: 48px;
+            margin: 4px 0 20px 4px;
         }
 
-        .button{
-            /* 所有的按钮 */
-            transition:all 0.2s ease 0s;
-            visibility:visible;
-            background-size:100% auto;
-            background-repeat:no-repeat;
-            background-color:white;
-            border-radius:10px;
+        .grid-container 
+        {
+            display: grid;
+            grid-gap: 4px;
+            max-width: 720px;
         }
-        .button:hover{
-            transform:translateY(-10px);
-            cursor:pointer;
+        
+        .grid-item 
+        {
+            position: relative;
+            margin: 0 0 0 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 160px;
+            background-color: none;
+            border: none;
+            max-width: 720px;
+        }
+
+        .grid-item .title 
+        {
+            position: absolute;
+            font-size: 22px;
+            left: 26px;
+            top: 11px;
+            right: 0px;
+            bottom: 0px;
+            text-align: left;
+            font-family: 'HarmonyOS Sans SC', sans-serif;
+        }
+
+        .grid-item .description 
+        {
+            position: absolute;
+            font-size: 16px;
+            left: 26px;
+            top: 45px;
+            right: 172px;
+            bottom: 26px;
+            text-align: left;
+            font-family: 'HarmonyOS Sans SC', sans-serif;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+
+        .grid-item img 
+        {
+            position: absolute;
+            height: 120px;
+            width: 120px;
+            right: 26px;
+            top: 20px;
+        }
+
+        .more 
+        {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 4px 12px 4px 0;
+            max-width: 720px;
+        }
+
+        .more-item 
+        {
+            position: relative;
+            margin: 0,4px 0 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 68px;
+            background-color: none;
+            border: none;
+            max-width: 720px;
+        }
+
+        .more-item img
+        {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            right: 28px;
+            top: 24px;
+            bottom: 24;
+        }
+
+        .more-item .title 
+        {
+            position: absolute;
+            font-size: 16px;
+            left: 26px;
+            right: 26px;
+            top: 25px;
+            bottom: 27px;
+            text-align: left;
+            font-family: 'HarmonyOS Sans SC', sans-serif;
+        }
+
+        .qr-button 
+        {
+            width: 100px;
+            position:absolute;
+            top: 18px;
+            bottom: 18px;
+            right: 26px;
+        }
+
+        @media (prefers-color-scheme: dark) 
+        {
+            body 
+            {
+                background-color: rgb(40,40,40);
+                color: white;
+            }
+        }
+
+        @keyframes FloatIn
+        {
+            0% 
+            {
+                opacity: 0;
+                transform: translateY(500px);
+            }
+            40% 
+            {
+                opacity: 0;
+                transform: translateY(500px);
+            }
+            100% 
+            {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    <div id="title"><!--标题-->
-        <h1 style="margin:0;color:#414141;">MSEDGE</h1>
-        <div style="margin:0;color:#414141;">下载密码 MSEDGE</div>
-        <br>
-    </div>
-    <div id="centerNav"><!--中心主体块-->
-            <div class="navSec"><!--一号选项卡-->
-                <div class="inNavSce1 button" onClick="window.open('https://space.bilibili.com/513293303','_self')"></div>
-                <div class="inNavSce1 button" ></div>
-                <div class="inNavSce1">
-                    <div id="qq" class="button" onClick="window.open('https://jq.qq.com/?_wv=1027&k=2SCSDvni','_self')"></div>
-                    <div id="font" class="button" onClick="window.open('https://developer.harmonyos.com/cn/docs/design/des-guides/font-0000001157868583','_self')"></div>
-                </div>
-            </div>
-            <div class="navSec"><!--二号选项卡-->
-                <div class="inNavSce2 button" onClick="window.open('https://github.com/MSEDGE-CORE/MSEDGE-CORE.github.io/issues','_self')"></div>
-                <div class="inNavSce2 button" ></div>
-            </div>
-            <div class="navSec"><!--三号选项卡-->
-                <div class="inNavSce3 button" ></div>
-                <div class="inNavSce3 button" onClick="window.open('core.html','_self')"></div>
-            </div>
+    <h1 class="page-title">MSEDGE</h1>
+    <div class="ContentEntrance">
+        <div class="grid-container">
+            <fluent-button class="grid-item" onclick="window.open('https://github.com/MSEDGE-CORE/MSEDGE-CORE.github.io/issues','_self')">
+                    <h2 class="title">反馈中心</h2>
+                    <p class="description">报告问题、提供功能建议<br>当你遇到虫子或者锐利边缘时，可以来这里看看。</p>
+                    <img src="./Assets/FeedBack.png">
+            </fluent-button>
+            <fluent-button class="grid-item" onclick="window.open('https://developer.harmonyos.com/cn/docs/design/des-guides/font-0000001157868583','_self')">
+                <h2 class="title">字体下载</h2>
+                <p class="description">HarmonyOS Sans SC<br>这是 MSEDGE 应用程序中经常使用的字体。</p>
+                <img src="./Assets/Font.png">
+            </fluent-button>
+            <fluent-button class="grid-item" onclick="window.open('AppList.html','_self')">
+                <h2 class="title">应用列表</h2>
+                <p class="description">下载 MSEDGE 应用程序<br>原 EG STORE 现已全新升级，可在网页中下载应用程序。</p>
+                <img src="./Assets/Applist.png">
+            </fluent-button>
         </div>
-    <script>
-        function intoAnimal(){
-            let oCenterNav = document.getElementById("centerNav");
-            oCenterNav.style.top="5%";
-        }
-        setTimeout("intoAnimal()","100");
-    </script>
+        <h3 class="more">更多</h3>
+        <div class="grid-container">
+            <fluent-button class="more-item" onclick="window.open('https://space.bilibili.com/513293303','_self')">
+                <span class="title">哔哩哔哩</span>
+                <img src="./Assets/Bilibili.png">
+            </fluent-button>
+            <fluent-button class="more-item" onclick="window.open('QrCode.html','_self')">
+                <span class="title">QQ 群聊</span>
+                <fluent-button class="qr-button" >显示二维码</fluent-button>
+            </fluent-button>
+        </div>
+    </div>
 </body>
 </html>
