@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=0.6">
-    <link rel="icon" href="./Assets/EG.png">
+    <link rel="icon" href="./Assets/MSEDGE.png">
     <title>MSEDGE</title>
     <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
     <style>
@@ -28,7 +28,7 @@
 
         .ContentEntrance 
         {
-            animation: FloatIn 1s cubic-bezier(0,1,0,1);
+            animation: FloatIn 0.8s cubic-bezier(0,1,0,1);
         }
 
         .page-title 
@@ -44,67 +44,11 @@
             grid-gap: 4px;
             max-width: 720px;
         }
-        
-        .grid-item 
-        {
-            position: relative;
-            margin: 0 0 0 0;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 160px;
-            background-color: transparent;
-            border: none;
-            max-width: 720px;
-        }
-
-        .grid-item .title 
-        {
-            position: absolute;
-            font-size: 22px;
-            left: 26px;
-            top: 8px;
-            right: 0px;
-            bottom: 0px;
-            text-align: left;
-            font-family: 'HarmonyOS Sans SC', sans-serif;
-        }
-
-        .grid-item .description 
-        {
-            position: absolute;
-            font-size: 16px;
-            left: 26px;
-            top: 42px;
-            right: 172px;
-            bottom: 26px;
-            text-align: left;
-            font-family: 'HarmonyOS Sans SC', sans-serif;
-            white-space: normal;
-            word-wrap: break-word;
-        }
-
-        .grid-item img 
-        {
-            position: absolute;
-            height: 120px;
-            width: 120px;
-            right: 26px;
-            top: 20px;
-        }
-
-        .more 
-        {
-            font-size: 14px;
-            font-weight: bold;
-            margin: 12px 4px 4px 4px;
-            max-width: 720px;
-        }
 
         .more-item 
         {
             position: relative;
-            margin: 0,4px 0 0;
+            margin: 0 0 0 0;
             top: 0;
             left: 0;
             width: 100%;
@@ -145,6 +89,93 @@
             right: 26px;
         }
 
+        .grid-item 
+        {
+            position: relative;
+            margin: 0 0 0 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 68px;
+            background-color: none;
+            border: none;
+            max-width: 720px;
+        }
+
+        .grid-item img
+        {
+            position: absolute;
+            height: 24px;
+            width: 24px;
+            left: 22px;
+            top: 22px;
+            bottom: 24;
+            border-radius: 8px;
+        }
+
+        .grid-item .title 
+        {
+            position: absolute;
+            font-size: 16px;
+            left: 68px;
+            right: 26px;
+            top: 25px;
+            bottom: 27px;
+            text-align: left;
+            font-family: 'HarmonyOS Sans SC', sans-serif;
+        }
+
+        .app-item 
+        {
+            position: relative;
+            margin: 0 0 0 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 68px;
+            background-color: none;
+            border: none;
+            max-width: 720px;
+        }
+
+        .app-item img
+        {
+            position: absolute;
+            height: 24px;
+            width: 24px;
+            left: 22px;
+            top: 22px;
+            bottom: 24;
+            border-radius: 8px;
+        }
+
+        .app-item .title 
+        {
+            position: absolute;
+            font-size: 16px;
+            left: 68px;
+            right: 26px;
+            top: 25px;
+            bottom: 27px;
+            text-align: left;
+            font-family: 'HarmonyOS Sans SC', sans-serif;
+            font-weight: bold;
+        }
+
+        .app-item .description 
+        {
+            position: absolute;
+            font-size: 16px;
+            left: 26px;
+            top: 42px;
+            right: 172px;
+            bottom: 26px;
+            text-align: left;
+            font-family: 'HarmonyOS Sans SC', sans-serif;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+
         @media (prefers-color-scheme: dark) 
         {
             body 
@@ -161,7 +192,7 @@
                 opacity: 0;
                 transform: translateY(500px);
             }
-            40% 
+            50% 
             {
                 opacity: 0;
                 transform: translateY(500px);
@@ -178,23 +209,25 @@
     <h1 class="page-title">MSEDGE</h1>
     <div class="ContentEntrance">
         <div class="grid-container">
-            <fluent-button class="grid-item" onclick="window.open('FeedBackHub.html','_self')">
-                <h2 class="title">反馈中心</h2>
-                <p class="description">报告问题、功能建议<br>当你遇到虫子或者锐利边缘时，可以来这里看看。</p>
-                <img src="./Assets/FeedBack.png">
+            <fluent-button class="app-item" onclick="window.open('https://github.com/MSEDGE-CORE/Edge18','_self')">
+                <img src="./Application/Edge18.png">
+                <span class="title">Edge 18</span>
+                <span style="position:absolute; font-size: 16px; font-family: Segoe Fluent Icons; right: 26px; top: 25px; ">&#xE76C;</span>
+            </fluent-button>
+            <fluent-button class="app-item" onclick="window.open('https://github.com/MSEDGE-CORE/YourFocus','_self')">
+                <img src="./Application/YourFocus.png">
+                <span class="title">专注印记</span>
+                <span style="position:absolute; font-size: 16px; font-family: Segoe Fluent Icons; right: 26px; top: 25px; ">&#xE76C;</span>
             </fluent-button>
             <fluent-button class="grid-item" onclick="window.open('AppList.html','_self')">
-                <h2 class="title">应用列表</h2>
-                <p class="description">下载 MSEDGE 应用程序<br>原 EG STORE 现已全新升级，可在网页中下载应用程序。</p>
-                <img src="./Assets/AppList.png">
-            </fluent-button>
-            <fluent-button class="grid-item" onclick="window.open('https://developer.harmonyos.com/cn/docs/design/des-guides/font-0000001157868583','_self')">
-                <h2 class="title">字体下载</h2>
-                <p class="description">HarmonyOS Sans SC<br>这是 MSEDGE 应用程序中经常使用的字体。</p>
-                <img src="./Assets/Font.png">
+                <span class="title">更多应用</span>
+                <img src="./Assets/AppList.png" style="border-radius: 0px;">
+                <span style="position:absolute; font-size: 16px; font-family: Segoe Fluent Icons; right: 26px; top: 25px; ">&#xE76C;</span>
             </fluent-button>
         </div>
-        <h3 class="more">更多</h3>
+        <div>
+            <span class="title"><br></span>
+        </div>
         <div class="grid-container">
             <fluent-button class="more-item" onclick="window.open('https://space.bilibili.com/513293303','_self')">
                 <span class="title">哔哩哔哩</span>
@@ -204,6 +237,9 @@
                 <span class="title">QQ 群聊</span>
                 <fluent-button class="qr-button">显示二维码</fluent-button>
             </fluent-button>
+            <div>
+                <span class="title"><br><br></span>
+            </div>
         </div>
     </div>
 </body>

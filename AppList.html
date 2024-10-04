@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=0.6">
-    <link rel="icon" href="./Assets/EG.png">
+    <link rel="icon" href="./Assets/MSEDGE.png">
     <title>MSEDGE</title>
     <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
     <style>
@@ -28,7 +28,7 @@
 
         .ContentEntrance 
         {
-            animation: FloatIn 1s cubic-bezier(0,1,0,1);
+            animation: FloatIn 0.8s cubic-bezier(0,1,0,1);
         }
 
         .page-title 
@@ -49,15 +49,22 @@
             margin: -68px 40px 0 -88px;
         }
 
+        .grid-container 
+        {
+            display: grid;
+            grid-gap: 4px;
+            max-width: 720px;
+        }
+
         .grid-item 
         {
             position: relative;
-            margin: 4px 0 0 0;
+            margin: 0 0 0 0;
             top: 0;
             left: 0;
             width: 100%;
             height: 68px;
-            background-color: none;
+            background-color: transparent;
             border: none;
             max-width: 720px;
         }
@@ -101,7 +108,7 @@
                 opacity: 0;
                 transform: translateY(500px);
             }
-            40% 
+            50% 
             {
                 opacity: 0;
                 transform: translateY(500px);
@@ -119,7 +126,7 @@
     <p class="page-secondtitle">蓝奏云下载密码<br>MSEDGE</p>
     <div class="ContentEntrance">
         <div class="grid-container">
-            <fluent-button class="grid-item" onclick="window.open('https://github.com/MSEDGE-CORE/Edge18/releases','_self')">
+            <fluent-button class="grid-item" onclick="window.open('https://github.com/MSEDGE-CORE/Edge18','_self')">
                 <img src="./Application/Edge18.png">
                 <span class="title">Edge 18</span>
                 <span style="position:absolute; font-size: 16px; font-family: Segoe Fluent Icons; right: 26px; top: 25px; ">&#xE76C;</span>
@@ -139,11 +146,24 @@
                 <span class="title">Minecraft Fluent UI 纹理包</span>
                 <span style="position:absolute; font-size: 16px; font-family: Segoe Fluent Icons; right: 26px; top: 25px; ">&#xE76C;</span>
             </fluent-button>
-            <fluent-button class="grid-item" onclick="window.open('https://github.com/MSEDGE-CORE/Clock/releases','_self')">
+            <fluent-button class="grid-item" onclick="window.open('https://github.com/MSEDGE-CORE/Clock','_self')">
                 <img src="./Application/Clock.png">
                 <span class="title">时钟</span>
                 <span style="position:absolute; font-size: 16px; font-family: Segoe Fluent Icons; right: 26px; top: 25px; ">&#xE76C;</span>
             </fluent-button>
+            <fluent-button class="grid-item" onclick="window.open('https://github.com/MSEDGE-CORE/MSEDGE-CORE.github.io','_self')">
+                <img src="./Application/Web.png">
+                <span class="title">网站</span>
+                <span style="position:absolute; font-size: 16px; font-family: Segoe Fluent Icons; right: 26px; top: 25px; ">&#xE76C;</span>
+            </fluent-button>
+            <fluent-button class="grid-item" onclick="window.open('https://github.com/MSEDGE-CORE/YourFocus','_self')">
+                <img src="./Application/YourFocus.png">
+                <span class="title">专注印记</span>
+                <span style="position:absolute; font-size: 16px; font-family: Segoe Fluent Icons; right: 26px; top: 25px; ">&#xE76C;</span>
+            </fluent-button>
+            <div>
+                <span class="title"><br><br></span>
+            </div>
         </div>
     </div>
 </body>
